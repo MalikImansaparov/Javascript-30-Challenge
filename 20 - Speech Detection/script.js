@@ -10,9 +10,8 @@
 
   recognition.addEventListener('result', e => {
     const transcript = Array.from(e.results)
-      .map(result => result[0])
-      .map(result => result.transcript)
-      .join('');
+      .map((result) => result[0])
+      .map((result) => result.transcript)``.join('');
 
       const poopScript = transcript.replace(/poop|poo|shit|dump/gi, '💩');
       p.textContent = poopScript;
